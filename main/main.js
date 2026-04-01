@@ -2,20 +2,38 @@
 import { sleep } from 'k6';
 import { error_check } from '../check/check.js';
 import { scenario } from 'k6/execution';
-import { DownloadFile, GetProfile, PostProfile, PostProfile_2, PostProfile_3, UploadFile } from '../api/example.js';
+import { login } from '../api/login.js';
+import { enrollment } from '../api/enrollment.js';
+import { courses_landingpage } from '../api/courses_landingpage.js';
+import { course_detail } from '../api/course_detail.js';
+import { completed_lesson_video } from '../api/completed_lesson_video.js';
+import { check_in } from '../api/check_in.js';
+import { check_out } from '../api/check_out.js';
+import { completed_lesson } from '../api/completed_lesson.js';
+import { get_survey_template } from '../api/get_survey_template.js';
+import { submit_survey } from '../api/submit_survey.js';
+import { submit_rating } from '../api/submit_rating.js';
+import { share_token } from '../api/share_token.js';
+import { login_share_token } from '../api/login_share_token.js';
 
 
 
 //============================================================================
 
 export default function () {    //เรียกใช้ API ใน export default function
-  //response = GetProfile()
-  //response = PostProfile()
-  //response = PostProfile_2()
-  //response = PostProfile_3(scenario)
-  //response = DownloadFile()
-  //response = UploadFile()
-  //response = UploadFile_2()
+  // response = login(scenario)
+  // response = enrollment(scenario)
+  // response = courses_landingpage()
+  // response = course_detail()
+  // response = completed_lesson_video(scenario)
+  // response = check_in(scenario)
+  // response = check_out(scenario)
+  // response = completed_lesson(scenario)
+  // response = get_survey_template()
+  // response = submit_survey(scenario)
+  // response = submit_rating(scenario)
+  // response = share_token()
+  // response = login_share_token()
 
 
   error_check(response);
